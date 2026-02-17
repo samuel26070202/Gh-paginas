@@ -30,6 +30,8 @@
 let usuario = document.getElementById("usuario");
 let mensaje = document.getElementById("mensaje");
 
+
+
 usuario.addEventListener("input", function (evento) {
 
     this.value = this.value.toLowerCase();
@@ -40,7 +42,8 @@ usuario.addEventListener("input", function (evento) {
 
         this.style.borderColor = "red"
 
-        this.borderColor = "2px"
+        this.style.borderWidth = "2px"
+
 
     } else if (!this.value) {
         // text-danger
@@ -60,4 +63,24 @@ usuario.addEventListener("input", function (evento) {
 
     this.value = this.value.replace(/[^a-z]/g, "");
 
+});
+
+let password = document.getElementById("password");
+let mensajePassword = document.getElementById("mensajePassword");
+
+password.addEventListener("input", function (){
+    if(this.value.lenth === 0){
+        mensajePassword.textContent = "Campo requerido";
+        mensajePassword.style.color = "yellow";
+        this.style.borderColor = "yellow";
+
+    }else if (this.value.length <= 10){
+        mensajePassword.textContent = "Debe tener mas de 10 caracteres";
+        mensajePassword.style.color = "red";
+        this.style.borderColor = "red";
+    }else{
+        mensajePassword.textContent = "Contraseña valida";
+        mensajePassword.style.color = "green";
+        this.style.borderColor = "green";
+    }
 });
