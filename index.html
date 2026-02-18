@@ -1,22 +1,46 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+crossorigin="anonymous">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-<div class="container">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
 
-    <div class="mb-3">
-        <label for="usuario" class="form-label">Usuario</label>
-        <input type="text" class="form-control" id="usuario">
-        <div id="mensaje"></div>
+<br>
+
+<form action="" method="post" id="formLogin">
+
+    <div class="container">
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="usuario">
+            <div id="mensaje"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+
+            <div class="input-group">
+                <input type="password" class="form-control" id="password">
+
+                <button id="retina" class="btn btn-outline-secondary" type="button" onclick="cambiar()">
+                    <i class="bi bi-eye"></i>
+                </button>
+            </div>
+
+            <div id="ContadorCaracteres"></div>
+            <div id="mensajePassword"></div>
+        </div>
+
+        <div id="mensajeEnvio"></div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
 
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="text" class="form-control" id="password">
-        <div id="mensajePassword"></div>
-    </div>
-
-</div>
+</form>
 
 <script src="validacion.js"></script>
+
 
